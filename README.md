@@ -1,7 +1,7 @@
 # SendMailConfirmation
 Show confirmation message before you send Outlook mail
 
-Outlookでのメール送信時に確認メッセージを表示する。  
+Outlookでのメール送信時に確認メッセージを表示する。  
 Alt+sでメールを作成途中で送信することを防ぐためにAlt+sを無効化しようとしたが、  
 設定方法が見つからなかったので作成。  
 
