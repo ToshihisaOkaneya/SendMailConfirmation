@@ -1,0 +1,20 @@
+Option Explicit
+
+' Show Confirmation Message before you send mail
+Private Sub Application_Itemsend(ByVal Item As Object, Cancel As Boolean)
+    Dim title As String: title = Item.Subject
+    Dim body As String: body = Item.body
+    Dim answer As Variant
+    Dim recipient As Variant
+    
+    ' Output recipient. You may add check logic here
+    For Each recipient In Item.Recipients
+        Debug.Print recipient
+    Next
+    
+    answer = MsgBox("Are you sure you want to send?", vbYesNo + vbDefaultButton2, "Confirmation")
+    
+    If answer = vbNo Then
+        Cancel = True
+    End If
+End Sub
